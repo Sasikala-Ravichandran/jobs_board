@@ -19,14 +19,16 @@ class JobsController < ApplicationController
 	end
 
 	def show
-
+       if request.path != job_path(@job)
+         redirect_to @job, :status => :moved_permanently
+       end
 	end
 
 	def edit
     end
 
     def update
-      
+        @job.slug = nil
     	if @job.update(jobs_params)
 			redirect_to @job, notice: "Successfully updated a job posting"
 		else
@@ -46,6 +48,6 @@ class JobsController < ApplicationController
     end
 
     def set_job
-    	@job = Job.find(params[:id])
+    	@job = Job.friendly.find(params[:id])
     end
 end

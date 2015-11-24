@@ -10,6 +10,8 @@ Gems used in this app:
 
 * simple_form for forms
 
+* friendly_id for user friendly urls
+
 
 
  
