@@ -1,4 +1,4 @@
-== JOBS_BOARD
+##JOBS_BOARD
 
 An app to add job postings along with a category so that user has ability to search jobs under a particular category
 
