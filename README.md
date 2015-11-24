@@ -1,28 +1,15 @@
-== README
+== JOBS_BOARD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An app to add job postings along with a category so that user has ability to search jobs under a particular category
 
-Things you may want to cover:
+Gems used in this app:
 
-* Ruby version
+* haml for view template
 
-* System dependencies
+* bootstrap for styling
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* simple_form for forms
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+ 
