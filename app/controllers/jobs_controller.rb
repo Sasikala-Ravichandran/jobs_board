@@ -2,7 +2,11 @@ class JobsController < ApplicationController
     before_action :set_job, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@jobs = Job.all.order("created_at DESC")
+		if(params[:category].blank? )
+		  @jobs = Job.all.order("created_at DESC")
+		else
+		  @jobs=Job.where("category = ?", Job.categories[params[:category]])
+		 end
 	end
 
 	def new
@@ -44,7 +48,7 @@ class JobsController < ApplicationController
     private
 
     def jobs_params
-    	params.require(:job).permit(:title, :desc, :company, :url)
+    	params.require(:job).permit(:title, :desc, :company, :url, :category)
     end
 
     def set_job

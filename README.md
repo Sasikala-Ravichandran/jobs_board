@@ -1,6 +1,6 @@
 ##JOBS_BOARD
 
-An app to add job postings along with a category so that user has ability to search jobs under a particular category
+An app to add job postings along with a category attribute in a job model which has been created using ActiveRecord Enums so that user has ability to search jobs under a particular category
 
 Gems used in this app:
 

@@ -3,5 +3,8 @@
   =f.input :desc, label: 'Job Description'
   =f.input :company, label: 'Your company'
   =f.input :url, label: 'Link to this job'
+  =f.input :category, collection: Job.categories.collect {|s| [s[0].humanize, s[0]]}, prompt: "Select Type of Job"
+
+ 
   %br/
   =f.button :submit

@@ -1,0 +1,12 @@
+!!!
+%html
+%head
+  %title JobBoard
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true 
+  = csrf_meta_tags 
+%body
+  -Job.categories.each do |c|
+    =link_to c[0].humanize, jobs_path(category: c[0])
+ 
+  = yield 
