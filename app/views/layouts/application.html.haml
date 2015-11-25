@@ -6,7 +6,18 @@
   = javascript_include_tag 'application', 'data-turbolinks-track' => true 
   = csrf_meta_tags 
 %body
-  -Job.categories.each do |c|
-    =link_to c[0].humanize, jobs_path(category: c[0])
- 
-  = yield 
+  %nav.navbar.navbar-default
+    .container
+      .navbar-header
+        .navbar-brand 
+          = link_to "JOB BOARD", jobs_path
+
+      %ul.nav.navbar-nav.navbar-right
+        -Job.categories.each do |c|
+          %li= link_to c[0].humanize, jobs_path(category: c[0])
+
+      =link_to "New Jobs", new_job_path, class: "navbar-text navbar-left navbar-link"
+
+  .container 
+    .col-md-6.col-md-offset-3
+      = yield  
