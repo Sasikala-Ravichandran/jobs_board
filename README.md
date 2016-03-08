@@ -1,8 +1,10 @@
-##JOBS_BOARD
+##JOBS BOARD
 
 An app to add job postings along with a category attribute in a job model which has been created using ActiveRecord Enums so that user has ability to search jobs under a particular category
 
 Gems used in this app:
+
+* pg for PostgreSQL database
 
 * haml for view template
 
@@ -10,8 +12,4 @@ Gems used in this app:
 
 * simple_form for forms
 
-* friendly_id for user friendly urls
-
-
-
- 
+* friendly_id for user friendly urls 
