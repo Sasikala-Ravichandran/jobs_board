@@ -54,6 +54,6 @@ class JobsController < ApplicationController
 
     def set_job
       @job = Job.friendly.find(params[:id])
-      end
+    end
 
 end
